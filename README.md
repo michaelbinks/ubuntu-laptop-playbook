@@ -4,6 +4,11 @@
 
 This playbook installs and configures most of the software I use on my Ubuntu laptop for Cloud and software development.
 
+## Requirements
+
+This role was developed using Ansible 2.8 with snap module:
+[https://docs.ansible.com/ansible/devel/modules/snap_module.html](https://docs.ansible.com/ansible/devel/modules/snap_module.html)
+
 ## Installation
 
 1.  [Install Ansible](http://docs.ansible.com/intro_installation.html).
