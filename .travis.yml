@@ -1,5 +1,5 @@
 ---
-dist: trusty
+dist: xenial
 
 services:
   - docker
@@ -9,6 +9,9 @@ env:
     version: "18.04"
 
 before_install:
+
+  # Update distribution
+  - 'sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y ca-certificates'
   # Build docker container
   - 'sudo docker pull ${distribution}:${version}'
   - 'sudo docker build --no-cache --rm --file=tests/dockerfiles/Dockerfile.${distribution}-${version} --tag=${distribution}-${version}:snap tests'
